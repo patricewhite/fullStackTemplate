@@ -15,7 +15,7 @@ export const fetchCheesesReducer = (state=initialState, action) => {
     }
     else if(action.type === actions.FETCH_CHEESES_SUCCESS) {
         return Object.assign({}, state, {
-            cheeses: [...state.cheeses, action.cheeses],
+            cheeses: action.cheeses,
             loading: false,
             error: null
         });
