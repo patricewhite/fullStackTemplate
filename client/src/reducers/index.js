@@ -1,12 +1,12 @@
-import * as actions from './actions'
+import * as actions from '../actions'
 
 const initialState = {
     cheeses: [],
     loading: false,
     error: null
-}
+};
 
-export const fetchCheeses = (state=initialState, action) => {
+export const fetchCheesesReducer = (state=initialState, action) => {
     if(action.type === actions.FETCH_CHEESES_REQUEST) {
         return Object.assign({}, state, {
             loading: true,
@@ -27,4 +27,4 @@ export const fetchCheeses = (state=initialState, action) => {
         });
     }
     return state;
-}   
+}

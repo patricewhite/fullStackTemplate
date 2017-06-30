@@ -8,11 +8,11 @@ import {Provider} from 'react-redux';
 
 import {fetchCheesesReducer} from './reducers';
 
-createStore(fetchCheesesReducer, applyMiddleware(thunk))
+const store = createStore(fetchCheesesReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
-  <CheeseList />
+    <CheeseList />
   </Provider>,
   document.getElementById('root')
 );

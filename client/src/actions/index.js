@@ -12,12 +12,11 @@ export const fetchCheeses = () => dispatch => {
     }).then(cheese => {
         dispatch(fetchCheesesSuccess());
     });
-} 
+}
 
 export const FETCH_CHEESES_REQUEST = 'FETCH_CHEESES_REQUEST';
 export const fetchCheesesRequest = () => ({
-    type: FETCH_CHEESES_REQUEST,
-    loading
+    type: FETCH_CHEESES_REQUEST
 });
 
 export const FETCH_CHEESES_ERROR = 'FETCH_CHEESES_ERROR';
