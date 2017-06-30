@@ -1,22 +1,32 @@
 import React from 'react';
-import {connect} from 'react-redux';
+//import {connect} from 'react-redux';
 
-export function CheeseList(props){
-  const cheeses = props.cheeses.map(cheese, index) => {
+
+export default function CheeseList(props){
+  let cheeses = [
+    "Bath Blue",
+    "Barkham Blue",
+    "Buxton Blue"
+]
+   const data = cheeses.map( (cheese, index) => (
+
+  
+ 
     <li key={index}>
-          {chesse}
+          {cheese}
     </li>
-  });
+   ))
+   ;
 
   return (
     <ul id='cheese-list'>
-      {cheeses}
+      {data}
     </ul>
   );
 };
 
-const mapStateToProps = state => ({
-  cheeses: state.cheeses
-});
+// const mapStateToProps = state => ({
+//   cheeses: state.cheeses
+// });
 
-export default connect(mapStateToProps)(CheeseList);
+// export default connect(mapStateToProps)(CheeseList);
