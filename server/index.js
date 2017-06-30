@@ -4,7 +4,30 @@ const express = require('express');
 const app = express();
 
 // API endpoints go here!
+app.get('/api/cheeses', (req, res) => {
+  const cheeses = [
+    "Bath Blue",
+    "Barkham Blue",
+    "Buxton Blue",
+    "Cheshire Blue",
+    "Devon Blue",
+    "Dorset Blue Vinney",
+    "Dovedale",
+    "Exmoor Blue",
+    "Harbourne Blue",
+    "Lanark Blue",
+    "Lymeswold",
+    "Oxford Blue",
+    "Shropshire Blue",
+    "Stichelton",
+    "Stilton",
+    "Blue Wensleydale",
+    "Yorkshire Blue"
+  ];
 
+  return res.json(cheeses);
+
+});
 
 // Serve the built client
 app.use(express.static(path.resolve(__dirname, '../client/build')));
