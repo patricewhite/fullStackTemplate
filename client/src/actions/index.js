@@ -16,7 +16,7 @@ export const fetchCheesesError = error => ({
 });
 
 export const fetchCheeses = () => dispatch => {
-    return fetch('http://localhost:8080/api/cheeses').then(res => {
+    return fetch('/api/cheeses').then(res => {
         if(!res.ok){
             return Promise.reject(res.statusText);
         }
